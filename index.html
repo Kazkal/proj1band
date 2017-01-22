@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html ng-app='BandApp'>
 	<head>
-	    
 	    <base href="/"> <!-- needed for Angular HTML5 mode -->
 	    <title>Final Project 1 KK</title>
-	    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
 	    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-		<style type="text/css">
+	    <script type="text/javascript" src="bower_components/a0-angular-storage/dist/angular-storage.js"></script>
+	    <style type="text/css">
 			h1 {
-			    font-size: 80px;
+			    font-size: 60px;
+			    font-family:'Brush Script MT';
+			}
+			div {
+			    font-size: 20px;
 			    font-family:'Brush Script MT';
 			}
 			body {
@@ -22,27 +28,24 @@
 	     <!--<h1 style="font-family:'Brush Script MT'" "font-size:30px">Charles Martin Swing Band</h1>-->
 	     <nav class="navbar navbar-inverse navbar-fixed-top">
 	     	<div class="container"><!-- use container to add margins to left & right -->
-	        
 	            <ul class="nav navbar-nav navbar-right"><!-- ALIGN TO THE RIGHT -->
 	                <li><a href="/">Home</a></li>
+	                <li><a href="/bookings">Bookings</a></li>
+	                <li class="dropdown">
+	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Music <span class="caret"></span></a>
+	                    <ul class="dropdown-menu">
+	                        <li><a href="/music/audio">Audio Clips</a></li>
+	                        <li><a href="/music/video">Video Clips</a></li>
+	                    </ul>
+	                </li>
 	                <li><a href="/tour">Tour Dates</a></li>
 	                <li><a href="/gallery">Gallery</a></li>
 	                <li><a href="/bio">Bio</a></li>
 	                <li><a href="/mailings">Mailings</a></li>
-
-	                <li class="dropdown">
-	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Music <span class="caret"></span></a>
-	                    <ul class="dropdown-menu">
-	                        <li><a href="/music/audio">Audio</a></li>
-		                	<li><a href="/music/video">Video</a></li>
-	                    </ul>
-	                    
-	                </li>
-	                <li><a href="/contact">Contact</a></li>
-	            </ul>
+	               
+	             </ul>
 	         </div>
-	      
-    	</nav>
+	     </nav>
 		<div ng-view>
 	 
 	    </div>

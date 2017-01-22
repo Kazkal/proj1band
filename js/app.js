@@ -7,6 +7,14 @@ angular.module('BandApp').config(function($locationProvider, $routeProvider) {
         templateUrl: 'templates/home.html',
         controller: 'HomeController'
     })
+     .when('/bookings', {
+      	templateUrl: 'templates/bookings.html',
+        controller: 'BookingController'
+    })
+     .when('/music/audio', {
+        templateUrl: 'templates/audio.html',
+        controller: 'AudioController'
+    })
       .when('/mailings', {
       	templateUrl: 'templates/mailings.html',
         controller: 'MailingController'
