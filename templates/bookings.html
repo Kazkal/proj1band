@@ -3,7 +3,7 @@
         <label>Are you looking for live music for your wedding or a corporate event? <br> Please complete the form below to enquire about your event and we will get back to you.</label>
             <div class="row">
                 <form name="bookingForm" data-ng-submit="submitForm()" novalidate>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <div class="form-group">
                             <label>Name</label>
                             <input type="text" name="fullname" class="form-control" data-ng-model="user.fullname" required>
@@ -20,7 +20,7 @@
                             <p data-ng-show="bookingForm.telephone.$pristine" class="help-block">Your telephone number is required</p>
                         </div>
                     </div>
-                     <div class="col-sm-6">
+                     <div class="col-sm-4">
                          <div class="form-group">
                             <label>Date of event</label>
                             <input type="date" name="eventdate" class="form-control" data-ng-model="user.eventdate" required>
@@ -36,11 +36,14 @@
                             <input type="text" name="message" class="form-control" data-ng-model="user.message" required>
                         </div>
                     </div>
-
+                     <div class="col-sm-4">
+                        <band-logo></band-logo>
+                     </div>
          
-                        <button type="submit" class="btn btn-primary" data-ng-disabled="bookingForm.$invalid">Send</button>
+                      
                         
                     </form>
             </div>
+              <button type="submit" class="btn btn-primary" data-ng-disabled="bookingForm.$invalid">Send</button>
     </div>
 </div>
