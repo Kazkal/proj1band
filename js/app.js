@@ -1,4 +1,4 @@
-angular.module('BandApp', ['ngRoute', 'RouteControllers', 'TrackService', 'LogoDirective']);
+angular.module('BandApp', ['ngRoute', 'RouteControllers']);
  
 angular.module('BandApp').config(function($locationProvider, $routeProvider) {
     $locationProvider.html5Mode(true);  // Enable href routing without hashes
@@ -11,10 +11,7 @@ angular.module('BandApp').config(function($locationProvider, $routeProvider) {
       	templateUrl: 'templates/bookings.html',
         controller: 'BookingController'
     })
-     .when('/shop', {
-        templateUrl: 'templates/shop.html',
-        controller: 'SearchController'
-    })
+    
      .when('/gallery', {
         templateUrl: 'templates/gallery.html',
         controller: 'GalleryController'
@@ -23,11 +20,11 @@ angular.module('BandApp').config(function($locationProvider, $routeProvider) {
         templateUrl: 'templates/biography.html',
         controller: 'BiographyController'
     })
-     .when('/music/audio', {
+     .when('/music', {
         templateUrl: 'templates/audio.html',
         controller: 'AudioController'
     })
-      .when('/music/video', {
+      .when('/video', {
         templateUrl: 'templates/video.html',
         controller: 'VideoController'
     })

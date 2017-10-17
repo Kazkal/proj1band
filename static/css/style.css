@@ -1,0 +1,116 @@
+/*borders and padding are included within the width or height of an element. */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {			/*image to resize with window...*/
+    min-height: 100%;   /*keep footer at bottom*/
+    margin: 0;		
+    padding: 0;
+    font-size: 12px;
+	}
+body {	            	/*padding-top: 10px;		to avoid content being hidden by navbar*/
+	background-color: #000000;
+	color: #FFFFFF;
+	font-family:'Helvetica, Arial, sans-serif';
+	display:flex;				/*any items inside content div will become flex items*/
+	justify-content: space-around;
+	
+	}
+
+div.content {		/*center webpage, need this to centre navbar*/
+    width: 980px;
+    margin:0 auto;
+    /*flex: 1 0 auto; - makes navbar too wide*/
+	font-size: 1.5em;		/*em preferred  for responsive pages*/
+	
+}
+
+#header {
+    width: 960px; 
+    margin: 0;        
+    }
+
+
+
+#ulnav a {
+display:block;
+text-align:center;
+width:119px;  /*fixed width */
+text-decoration:none; 
+}
+
+
+
+.row {
+	margin-bottom:50px;
+}
+/* do not set width on div child so takes same width as parent*/
+
+img {		/*image to fit in window*/
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#newaudio{  /*audio control on home page*/
+	display:none;
+}
+@media screen and (max-width: 400px){   /* max-width for mobile */
+    p {
+        font-size: 10px;
+    }
+   
+}
+/* Style all font awesome icons */
+.fa {
+    padding:10px;
+    /*font-size: 50px;*/
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+}
+/* Facebook */
+.fa-facebook {
+    background: #000000;
+    color: #A9A9A9;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #000000;
+    color: #A9A9A9;
+}
+
+.fa-youtube {
+    background: #000000;
+    color: #A9A9A9;
+}
+
+/* centre text & set footer color */
+footer{
+    background: #000000;
+    text-align:center;
+    /*font-size:0.75em;*/
+    font-weight: lighter;  
+}
+.list-group-item{
+	background-color:#000000;
+}
+audio{
+	background-color:#000000;	
+}
+
+ video {
+        display: block;
+        margin: 50px auto;
+        /*filter: grayscale(50%);
+        -webkit-filter: grayscale(100%);
+        -webkit-filter: hue-rotate(270deg);
+        -webkit-filter: invert(1); */
+        /* http://html5-demos.appspot.com/static/css/filters/index.html*/
+    }

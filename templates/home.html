@@ -1,50 +1,38 @@
-<div class="container">
-	<h1>{{title}}</h1>
-    <!-- place rows inside a .container class. -->
-    <div class="row">
-        <div class="col-sm-6">
-        	<label>The Charles Martin Swing Band bring the whole world of swing music to your corporate event or wedding celebration from start to finish. If you and your guests enjoy Michael Buble, Frank Sinatra, Dean Martin and the Rat Pack era then this is the perfect events band for you. They have twenty years experience of performing live and their repertoire ranges from Classic Swing music from Modern Contemporary Chart and 50’s music right up to the present day and contains music from a diverse range of genres including Swing, Motown, Rock and Roll, Dance, 70s Disco and much more.</label>
-        </div>
-    	<div class="col-sm-6">
-    		<img src="swing band.jpeg" alt="Photo" style="width:80%;height:80%;">
-    		
+<div class="container">			<!--style="margin-bottom:10px;"-->
+	<div class="row" >
+        <div class="col-sm-10 col-md-10">
+    		<img src="static/images/swingband1.png" alt="Photo" >
     	</div>
     </div>
- </div>
+	<div class="row">
+		<div class="col-sm-10 col-md-10">
+    		<p>The Charles Martin Swing Band bring the whole world of swing music to your corporate event or wedding celebration from start to finish. If you and your guests enjoy Michael Buble, Frank Sinatra, Dean Martin and the Rat Pack era then this is the perfect events band for you.</p>
+    		<p>With twenty years experience of performing live and repertoire ranges from Classic Swing musi, Modern Contemporary Chart and 50’s music right up to the present day, the Charles Martin Swing Band will deliver unforgettable entertainment.    		</p>
+    	</div>
+    </div>
 
-    <!--3 column layout-->
-<div class='container'>	
-
-	<div class='row'>
-		<div class='col-md-4' style="border:solid">
+    <div class="row">
+        <div class="col-sm-10 col-md-4">
+        	<!--click on image to listen to short hidden audio --> 
+        	<p>Click here to listen to our latest track</p>
+			<img src="static/images/album.jpeg" alt="album" style="width:50%;height:50%;" align="left" onclick="document.getElementById('newaudio').play();">
 			<br>
-			<br>
-			<img src="album1.jpeg" alt="album" style="width:20%;height:20%;"
-			<label>Click here to listen to our latest track<br></label>
-
-			<!--<img src="album1.jpeg" alt="album" style="width:20%;height:20%;"-->
-			<audio controls= "controls" loop preload="metadata">
-				 <source src="swing band 1.mp3" type="audio/mpeg; codecs=mp3"/>	 
-				 <!-- add other fallback solution here, eg. Your browser does not support the <code>audio</code> element -->
-				 Your browser does not support the audio element.
+			<audio id="newaudio" controls= "controls" preload="metadata">
+				<source src="static/music/SampleAudio.mp3" type="audio/mpeg; codecs=mp3"/>	 
+				<!-- add other fallback solution here, eg. Your browser does not support the <code>audio</code> element -->
+				Your browser does not support the audio element.
 			</audio>
 		</div>
-		<div class='col-md-4' >
-			
-			<h3><u>Contact us<u><h3>
-			<label>Call us on 01332 465638 or 07711967707. If you prefer use our bookings form or send an email to CharlesMartin@gmail.com.</label>
+		 <div class="col-sm-10 col-md-4">
+		 	<h4><u>Contact us</u></h4>
+			<p>Call us on 01332 465638 or 07711967707</p>
+			<p> If you prefer use our bookings form </p>
+			<p> or send an email to
+			<a href="mailto:CharlesMartin@gmail.com">CharlesMartin@gmail.com</a></p>
 		</div>
-		<div class='col-md-4' >
-			<br>
-			<a href="https://www.facebook.com/theswingcats">
-				<img src="facebook.png" alt="Facebook" style="width:6%;height:6%;">
-			</a>
-			<a href="https://twitter.com/michelmershband">
-				<img src="twitter.png" alt="Twitter" style="width:6%;height:6%;">
-			</a>
-			
+		<div class="col-sm-10 col-md-4">
+			sign up to newsletter here?
 		</div>
 		
 	</div>
 </div>
-

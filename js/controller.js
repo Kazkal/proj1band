@@ -3,33 +3,23 @@ angular.module('RouteControllers', [])
         $scope.title = "Charles Martin Swing Band!";
     })
 
-    <!--To search for all Jack Johnson audio and video content and return only the first 25 items,-->
-    .controller('SearchController', function($scope, TrackAPIService) {
-        var URL="https://itunes.apple.com/search?term=jack+johnson&limit=25";
-        alert("step a")
-        $scope.tracks = [];
-        alert("step 1")
-        TrackAPIService.callAPI(URL).then(function(results) {
-            $scope.tracks = results.data || [];
-            console.log($scope.tracks);
-            alert("step 2")
-            alert("You have successfully searched for tracks from Itunes");
-
-        }).catch(function(err) {  
-            alert("Oops! Something went wrong!");
-            console.log(err);
-        });       
-    })
-
-
     .controller('AudioController', function($scope) {
-        $scope.title = "Charles Martin Swing Band!";
+        $scope.title = "Soundclips";
+        //pause 1 audio to play another?
+        document.addEventListener('play', function(e){
+        var audios = document.getElementsByTagName('audio');
+        for(var i = 0, len = audios.length; i < len;i++){
+            if(audios[i] != e.target){
+                audios[i].pause();
+            }
+            }
+        }, true);
     })
      .controller('VideoController', function($scope) {
-        $scope.title = "Charles Martin Swing Band!";
+        $scope.title = "See video clips from our back catalogue";
     })
     .controller('GalleryController', function($scope) {
-        $scope.title = "Photos";
+        $scope.title = "Photos of the band members";
     })
     .controller('BiographyController', function($scope) {
         $scope.title = "Biography";

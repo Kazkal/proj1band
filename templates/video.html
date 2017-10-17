@@ -1,27 +1,37 @@
-<div class="container"> <!-- style="background-image: url(wallpaper.jpeg)" background-repeat: no-repeat;>-->
-    <h1>{{title}}</h1>
+<div class="container"> <!-- -->
+    <h3>{{title}}</h3>
 
-    <label>See clips from our back catalogue. </label>
     <div class="row">
-        <div class="col-sm-6">
-            <h4><u>Video clip 1</u></h4>
-                 <video width=70% height=70% controls= "controls" preload="metadata" poster= "music/swingbanda.jpg">
-                    <source src="music/SampleVideo.mp4"/>
-                    Your browser does not support the video tag.
-                </video>
-                                                
-            
-        </div>
-        <div class="col-sm-6">
-            <h4><u>Video clip 2</u></h4>
+        <div class="col-sm-12 col-md-4">
+             <!-- Preload just metadata  -->
+             <video width=300 height=280 controls="controls" preload="auto" poster= "static/images/group1.jpeg">
+                <source src="static/videos/big_buck_bunny.mp4" type="video/mp4"/>
+                <source src="static/videos/big_buck_bunny.ogv" type="video/ogg"/>
+                <source src="static/videos/big_buck_bunny.webm" type="video/webm"/>
+                <track default src="static/videos/track.vtt" label="English subtitles" kind="subtitles" srclang="en" default>
+                Your browser does not support the video tag.
                 
-                <video width=70% height=70% controls= "controls" preload="metadata" poster= "music/swingbandb.jpeg">
-                    <source src="music/TheMonkees.mp4"/>
-                    Your browser does not support the video tag.
-                </video>
-                                                
-            
+            </video>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <!--play the video beginning at 10 seconds and ending at 30 seconds,-->
+            <video width="300" height="280" controls="controls" preload="metadata" poster= "static/images/group2.jpg">
+                <source src="static/videos/SampleVideo.mp4#t=10,30" type="video/mp4"/>
+                <source src="static/videos/small.ogv#t=10,30" type="video/ogg"/>
+                <source src="static/videos/small.webm#t=10,30" type="video/webm"/>
+                <track default src="static/videos/track.vtt" label="English subtitles" kind="subtitles" srclang="en" default>
+                Your browser does not support the video tag.
+            </video>
+
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <video width="300" height="280" controls="controls" preload="metadata" poster= "static/images/group4.jpg">
+                <source src="static/videos/TheMonkees.mp4" type="video/mp4"/>
+                <source src="static/videos/small.ogv" type="video/ogg"/>
+                <source src="static/videos/small.webm" type="video/webm"/>
+                <track default src="static/videos/track.vtt" label="English subtitles" kind="subtitles" srclang="en" default>
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
-
 </div>
