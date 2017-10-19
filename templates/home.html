@@ -1,7 +1,7 @@
 <div class="container">			<!--style="margin-bottom:10px;"-->
-	<div class="row" >
+	<div class="row" id="mainpic">
         <div class="col-sm-10 col-md-10">
-    		<img src="static/images/swingband1.png" alt="Photo" >
+    		<img src="static/images/swingband1.png" alt="Photo" id="homeimage">
     	</div>
     </div>
 	<div class="row">
@@ -12,10 +12,10 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-10 col-md-4">
+        <div class="col-sm-10 col-md-5">
         	<!--click on image to listen to short hidden audio --> 
         	<p>Click here to listen to our latest track</p>
-			<img src="static/images/album.jpeg" alt="album" style="width:50%;height:50%;" align="left" onclick="document.getElementById('newaudio').play();">
+			<img id="newtrack" src="static/images/album.jpeg" alt="album" onclick="document.getElementById('newaudio').play();">
 			<br>
 			<audio id="newaudio" controls= "controls" preload="metadata">
 				<source src="static/music/SampleAudio.mp3" type="audio/mpeg; codecs=mp3"/>	 
@@ -23,15 +23,12 @@
 				Your browser does not support the audio element.
 			</audio>
 		</div>
-		 <div class="col-sm-10 col-md-4">
+		 <div class="col-sm-10 col-md-6">
 		 	<h4><u>Contact us</u></h4>
 			<p>Call us on 01332 465638 or 07711967707</p>
 			<p> If you prefer use our bookings form </p>
 			<p> or send an email to
 			<a href="mailto:CharlesMartin@gmail.com">CharlesMartin@gmail.com</a></p>
-		</div>
-		<div class="col-sm-10 col-md-4">
-			sign up to newsletter here?
 		</div>
 		
 	</div>

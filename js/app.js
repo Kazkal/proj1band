@@ -5,7 +5,7 @@ angular.module('BandApp').config(function($locationProvider, $routeProvider) {
  	
     $routeProvider.when('/', {
         templateUrl: 'templates/home.html',
-        controller: 'HomeController'
+       // controller: 'HomeController'
     })
      .when('/bookings', {
       	templateUrl: 'templates/bookings.html',
@@ -16,10 +16,7 @@ angular.module('BandApp').config(function($locationProvider, $routeProvider) {
         templateUrl: 'templates/gallery.html',
         controller: 'GalleryController'
     })
-      .when('/biography', {
-        templateUrl: 'templates/biography.html',
-        controller: 'BiographyController'
-    })
+     
      .when('/music', {
         templateUrl: 'templates/audio.html',
         controller: 'AudioController'

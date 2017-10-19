@@ -17,7 +17,7 @@ body {	            	/*padding-top: 10px;		to avoid content being hidden by navba
 	font-family:'Helvetica, Arial, sans-serif';
 	display:flex;				/*any items inside content div will become flex items*/
 	justify-content: space-around;
-	
+	flex-direction:column;
 	}
 
 div.content {		/*center webpage, need this to centre navbar*/
@@ -28,13 +28,17 @@ div.content {		/*center webpage, need this to centre navbar*/
 	
 }
 
-#header {
-    width: 960px; 
-    margin: 0;        
+#header, #logo {				/*this should center logo?!!!!*/
+	display: block;
+    margin-left: auto;
+    margin-right: auto; 
     }
 
 
-
+#logo{		/*this centers logo!!!!!!!!!!!!!*/
+	width:100%;
+	text-align: center;
+}
 #ulnav a {
 display:block;
 text-align:center;
@@ -44,18 +48,24 @@ text-decoration:none;
 
 
 
-.row {
-	margin-bottom:50px;
+*.row {
+	margin-bottom:20px;
 }
 /* do not set width on div child so takes same width as parent*/
 
-img {		/*image to fit in window*/
+#mainpic {		/*max-width: 100%;, need to style div to get bottom margin */
     padding: 0;
     display: block;
     margin: 0 auto;
     max-height: 100%;
-    max-width: 100%;
+    
+    margin-bottom:30px;
 }
+#newtrack{
+	width:30%;
+	height:30%;
+	}
+	
 
 #newaudio{  /*audio control on home page*/
 	display:none;
@@ -73,20 +83,6 @@ img {		/*image to fit in window*/
     width: 100px;
     text-align: center;
     text-decoration: none;
-}
-/* Facebook */
-.fa-facebook {
-    background: #000000;
-    color: #A9A9A9;
-}
-
-/* Twitter */
-.fa-twitter {
-    background: #000000;
-    color: #A9A9A9;
-}
-
-.fa-youtube {
     background: #000000;
     color: #A9A9A9;
 }
@@ -95,7 +91,7 @@ img {		/*image to fit in window*/
 footer{
     background: #000000;
     text-align:center;
-    /*font-size:0.75em;*/
+    font-size:0.75em;
     font-weight: lighter;  
 }
 .list-group-item{
@@ -114,3 +110,51 @@ audio{
         -webkit-filter: invert(1); */
         /* http://html5-demos.appspot.com/static/css/filters/index.html*/
     }
+
+
+#gallerypanel div figure img {
+	border:5px solid white;
+	max-width:160px;
+	max-height:160px;
+	transition:transform 0.25s ease;
+	
+}
+/* enlarge image when hovering over*/
+#gallerypanel div figure img:hover {
+	-webkit-transform:scale(2.5); 
+    transform:scale(2.5);
+    
+}
+#gallerypanel{
+	margin-top:60px;
+	margin-bottom:60px;
+	position:relative;
+}
+.container{
+	min-height:100%;
+}
+
+/*enlargens image when called by jquery function*/
+.image_enlarge{
+	-webkit-transform:scale(2.0); 
+    transform:scale(2.0);
+    z-order:100;
+}
+
+.image_to_back{
+	z-order:-1;
+}
+
+.underline{
+  text-decoration:underline;
+}
+.border{
+  border: solid 2px #ccc;
+}
+#bookingpanel
+
+
+
+#gallery1, #gallery2, div, figure{
+	position:relative;
+}
