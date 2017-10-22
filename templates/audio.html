@@ -1,42 +1,32 @@
-<div class="container">
+<div class="container" id = "audiopanel">
+    <h3>{{title}}</h3>
     <div class="row">
-        <h3>{{title}}</h3>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-8">
-            <ul class="list-group">
-                <li class="list-group-item"><span class="glyphicon glyphicon-music"></span>  1.  Topsy</a>
-                    &emsp;&emsp;&emsp;
-                    <audio controls= "controls" preload="metadata">
-                         <source src="/static/music/c5ztopsy.mp3" type="audio/mpeg; codecs=mp3"/> 
-                         <source src="/static/music/c5ztopsy.ogg" type="audio/ogg; codecs=vorbis"/> 
-                         <!-- lets users with unsupporting browsers know what's going on.-->
-                         Your browser does not support the audio element.
-                    </audio>
-                </li>
-                <li class="list-group-item"><span class="glyphicon glyphicon-music"></span>  2. Fish for supper</a>&emsp;
-                     <audio controls= "controls" preload="metadata">
-                         <source src="/static/music/c5zfish.mp3" type="audio/mpeg; codecs=mp3"/>  
-                         <source src="/static/music/c5zfish.ogg" type="audio/ogg; codecs=vorbis"/>
-                         Your browser does not support the audio element.
-                    </audio>
-                </li>
-           
-                <li class="list-group-item"><span class="glyphicon glyphicon-music"></span>  3. Moon river</a>&emsp;&emsp;
-                    <audio controls= "controls" preload="metadata">
-                         <source src="/static/music/c3zmoonriver.mp3" type="audio/mpeg; codecs=mp3"/> 
-                         <source src="/static/music/c3zmoonriver.ogg" type="audio/ogg; codecs=vorbis"/> 
-                         Your browser does not support the audio element.
-                    </audio>
-                </li>
-                <li class="list-group-item"><span class="glyphicon glyphicon-music"></span>  4. Black Coffee</a>&emsp;&emsp;
-                     <audio  controls= "controls" preload="metadata">
-                         <source src="/static/music/c5vblackcoffee.mp3" type="audio/mpeg; codecs=mp3"/>  
-                         <source src="/static/music/c5vblackcoffee.ogg" type="audio/ogg; codecs=vorbis"/>
-                         Your browser does not support the audio element.
-                    </audio>
-                </li>
-            </ul>
+        <div class="col-sm-12 col-md-10">
+            <table>
+                 <thead>
+                    <tr>
+                        <th width="20%">No.</th>
+                        <th width="50%">Name of track</th>
+                        <th width="40%">Album</th>
+                        <th width="50%">Play</th>
+                    </tr>
+                </thead>
+
+                <tr ng-repeat="clip in objSoundClips">
+                    <td>{{$index + 1}}</td>
+                    <td>{{clip.track}}</td>
+                    <td>{{clip.album}}</td>
+                    <td>
+                        <audio controls= "controls" preload="metadata">
+                            <source src= {{clip.filemp3}} type="audio/mpeg; codecs=mp3"/> 
+                            <source src= {{clip.fileogg}} type="audio/ogg; codecs=vorbis"/> 
+                             <!-- lets users with unsupporting browsers know what's going on.-->
+                            Your browser does not support the audio element.
+                        </audio>
+
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>

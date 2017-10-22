@@ -32,18 +32,7 @@
                     <input type="text" name="venue" class="form-control" data-ng-model="customer.venue" required>
                     
                 </div>
-                <div class="form-group">
-                <!-- can select day or evening package for quote-->
-                    <label>
-                        <input type="radio" name="package" value="day" ng-model="radioboxModel.value">
-                        Day package
-                    </label>
-                    <label>
-                        <input type="radio" name="package" value="evening" ng-model="radioboxModel.value">
-                        Evening package
-                    </label>
-                    <!-- test here - {{radioboxModel.value}} -->
-                </div>
+                
                 
             </div>
             <div class="col-sm-10 col-md-3">
@@ -54,27 +43,38 @@
                     <input type="text" name="eventdate" class="form-control" data-ng-model="customer.eventdate" required>
                     <p data-ng-show="bookingForm.eventdate.$pristine" class="help-block">The date of the event  is required</p>
                 </div>
-                 <div class="form-group">
-                    <label>Type of event</label>
-                    <!-- event type in listbox, populated by array in controller -->
-                    <select ng-model="selectedtype" ng-options="x for x in eventtypes"> </select> {{selectedtype}}
-
-                    <input type="text" name="eventtype" class="form-control" data-ng-model=customer.eventtype required>
-                    <p data-ng-show="bookingForm.eventtype.$pristine" class="help-block">The event type is required</p>
+                <div class="form-group" ng-init="radioboxModel='day'" style="border:solid 1px;">
+                <!-- can select day or evening package for quote-->
+                    <label>
+                        <input type="radio" name="package" value="day" ng-model="radioboxModel">
+                        Day package
+                    </label>
+                    <br>
                     
+                    <label>
+                        <input type="radio" name="package" value="evening" ng-model="radioboxModel">
+                        Evening package
+                    </label>
+                    <!-- test here - {{radioboxModel.value}} -->
                 </div>
+                <div class="form-group" >
+                    <br>
+                    <label>Type of event &nbsp; </label>
+                    <!-- event type in listbox, populated by array in controller , {{selectedtype}}-->
+                    <select id="bookingslistbox" ng-model="selectedtype" ng-options="x for x in eventtypes"> </select> 
+
+                   
+                </div>    
                 <div class="form-group">
                     <label>Any additional information</label>
-                    <input type="text" name="information" class="form-control" data-ng-model="customer.information">
-
-                    <br>
-                      <!--submit button to remain disabled if any data invalid   -->
-                    <button type="submit" class="btn btn-primary" data-ng-disabled="bookingForm.$invalid">Send</button>  
-                
+                    <input type="text" name="information" class="form-control" data-ng-model="customer.information" >
+                  
                 </div>
-            </div>
-            
-                
+                             
+             
+                  <!--submit button to remain disabled if any data invalid   -->  
+                <button type="submit" class="btn btn-primary" data-ng-disabled="bookingForm.$invalid">Send</button> 
+            </div>                   
         </form>
     </div>  
 </div>
