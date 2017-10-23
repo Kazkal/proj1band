@@ -44,7 +44,7 @@ angular.module('RouteControllers', [])
         $scope.submitForm = function() {
             if ($scope.bookingForm.$valid) {
                 $scope.bookingCustomer.eventdate = $scope.customer.eventdate;
-                alert($scope.radioboxModel);
+                //alert($scope.radioboxModel);
                 //check event date entered matches 1 held in array AvailableDates
                 for (var i in AvailableDates) {
                     if ($scope.bookingCustomer.eventdate===AvailableDates[i]) {
@@ -64,13 +64,12 @@ angular.module('RouteControllers', [])
     })
 
     .controller('MailingController', function($scope) {
-        $scope.title = "Be the first to find out";
+        $scope.title = "Sign up to receive our monthly newsletter and stay up to date on forthcoming gigs and new material.";
         $scope.mailingUser = {};
         $scope.submitForm = function() {
             if ($scope.mailingForm.$valid) {
-                $scope.mailingUser.fullname = $scope.user.fullname;
-                $scope.mailingUser.email = $scope.user.email;
-                alert("You have successfully subscribed to our mailing list.");
+                $scope.mailingUser.firstname = $scope.user.firstname;
+                alert("Thankyou " + $scope.mailingUser.firstname + ".  You have successfully subscribed to our monthly newsletter.");
         	}
     	}
     })

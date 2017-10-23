@@ -113,7 +113,12 @@ img {
 /* centre text & set footer color */
 footer{
     text-align:center;
-    height:60px;  /*need this to help keep footer at bottom*/
+     /*need this to help keep footer at bottom
+    position: absolute;*/
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
     
 }
 
@@ -121,9 +126,13 @@ footer p{
    font-size:0.75em;
     font-weight: lighter;  
 }
-#videopanel, #mailingpanel{
-    margin-bottom: 80px;
+#videopanel{
+    margin-bottom: 45px;
 }
+#gallerypanel{
+    margin-bottom: 80px;    
+}
+
 .list-group-item{
 	background-color:#000000;
 }
@@ -131,9 +140,6 @@ footer p{
 
 
 //need to set position to relative, absolute or fixed) for z-index to work
-#gallerypanel{
-    margin-bottom: 250px;    
-}
 .galleryitems {
 	border:5px solid white;
 	max-width:160px;
