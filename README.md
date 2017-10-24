@@ -78,6 +78,17 @@ Tested website in following browsers:
 
 
 
+## Deployment to Github Pages
+1. I created a new branch called gh-pages in my github repositiory (https://github.com/Kazkal/proj1band). This copied all the code in the master branch to the new branch gh-pages.
+2. I removed bower_components from the .gitignore file in gh-pages because bower components were needed for deployment.
+3. I created a new local branch called gh-pages by running git fetch and git checkout. This copied project code into the local gh-pages branch.
+4. I installed the bower-components by running  ```bower install```.
+5. I pushed these changes to the remote gh-pages branch.
+6. I changed the absolute paths to relative paths by updating the base tag in the index.html to "." and the Home link in the navigation bar to ".".
+7. I created a file called 404.html to redirect users back to the Home page whenever the browser searches for a non-existing page.
+8. I pushed these changes to the remote gh-pages branch.
+
+
 
 ## Contributing
 
