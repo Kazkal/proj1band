@@ -4,7 +4,7 @@ angular.module('RouteControllers', [])
         $scope.title = "Soundclips from back catalogue";
         //create object to hold sound clips:
         $scope.objSoundClips = [
-                {track:"Topsy", album:"Modern Times", filemp3:"/static/music/c5ztopsy.mp3", fileogg:"/static/music/c5ztopsy.ogg"},
+                {track:"Topsy", album:"Modern Times", filemp3:"static/music/c5ztopsy.mp3", fileogg:"static/music/c5ztopsy.ogg"},
                 {track:"Moon River", album:"Rain In June", filemp3:"/static/music/c3zmoonriver.mp3", fileogg:"/static/music/c3zmoonriver.ogg"},
                 {track:"Black Coffee", album:"Modern Times", filemp3:"/static/music/c5vblackcoffee.mp3", fileogg:"/static/music/c5vblackcoffee.ogg"},
                 {track:"Fish for Supper", album:"Fancy Cocktails and Hot Sauce", filemp3:"/static/music/c5zfish.mp3",fileogg:"/static/music/c5zfish.ogg"}
